@@ -52,4 +52,14 @@ public class Sales extends CommonFields{
     public void setDetails(String details) {
         this.details = details;
     }
+
+    @Override
+    public String toString() {
+        return "Sales{" +
+                "paymentType='" + paymentType + '\'' +
+                ", amount=" + amount +
+                ", quantity='" + quantity + '\'' +
+                ", details='" + details + '\'' +
+                '}';
+    }
 }

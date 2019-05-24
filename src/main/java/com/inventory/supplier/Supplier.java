@@ -1,10 +1,12 @@
 package com.inventory.supplier;
 
+import com.inventory.commonFields.CommonFields;
+
 import javax.persistence.Entity;
 import java.sql.Timestamp;
 
 @Entity
-public class Supplier {
+public class Supplier extends CommonFields {
     private String supplierWebsite;
     private Timestamp supplierCode;
 
@@ -30,5 +32,13 @@ public class Supplier {
 
     public void setSupplierCode(Timestamp supplierCode) {
         this.supplierCode = supplierCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Supplier{" +
+                "supplierWebsite='" + supplierWebsite + '\'' +
+                ", supplierCode=" + supplierCode +
+                '}';
     }
 }

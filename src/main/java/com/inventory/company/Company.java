@@ -1,10 +1,12 @@
 package com.inventory.company;
 
+import com.inventory.commonFields.CommonFields;
+
 import javax.persistence.Entity;
 import java.sql.Timestamp;
 
 @Entity
-public class Company {
+public class Company extends CommonFields {
     private String coyLogo;
     private String footerText;
     private String coyDecsription;
@@ -50,5 +52,15 @@ public class Company {
 
     public void setCoyCode(Timestamp coyCode) {
         this.coyCode = coyCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "coyLogo='" + coyLogo + '\'' +
+                ", footerText='" + footerText + '\'' +
+                ", coyDecsription='" + coyDecsription + '\'' +
+                ", coyCode=" + coyCode +
+                '}';
     }
 }
