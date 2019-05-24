@@ -3,10 +3,15 @@ package com.inventory.commonFields;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class CommonFields implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private LocalDate dateCreated;
 	private LocalDate dateModified;
