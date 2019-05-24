@@ -1,7 +1,10 @@
 package com.inventory.user;
 
+import javax.persistence.Entity;
+
 import com.inventory.commonFields.CommonFields;
 
+@Entity
 public class User extends CommonFields {
 
 	/**
