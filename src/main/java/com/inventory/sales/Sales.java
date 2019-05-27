@@ -6,7 +6,11 @@ import javax.persistence.Entity;
 
 @Entity
 public class Sales extends CommonFields{
-    private String paymentType;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String paymentType;
     private Float amount;
     private String quantity;
     private String details;

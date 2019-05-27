@@ -3,14 +3,16 @@ package com.inventory.supplier;
 import com.inventory.commonFields.CommonFields;
 
 import javax.persistence.Entity;
-import java.sql.Timestamp;
 
 @Entity
 public class Supplier extends CommonFields {
-    private String supplierWebsite;
-    private Timestamp supplierCode;
 
-    public Supplier(String supplierWebsite, Timestamp supplierCode) {
+	private static final long serialVersionUID = 1L;
+	
+	private String supplierWebsite;
+    private String supplierCode = "SUP"+System.currentTimeMillis();
+
+    public Supplier(String supplierWebsite, String supplierCode) {
         this.supplierWebsite = supplierWebsite;
         this.supplierCode = supplierCode;
     }
@@ -26,11 +28,11 @@ public class Supplier extends CommonFields {
         this.supplierWebsite = supplierWebsite;
     }
 
-    public Timestamp getSupplierCode() {
+    public String getSupplierCode() {
         return supplierCode;
     }
 
-    public void setSupplierCode(Timestamp supplierCode) {
+    public void setSupplierCode(String supplierCode) {
         this.supplierCode = supplierCode;
     }
 
