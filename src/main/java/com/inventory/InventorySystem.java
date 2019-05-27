@@ -5,10 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
 @SpringBootApplication(exclude= {SecurityAutoConfiguration.class})
-public class DynamicInventoryApplication {
+public class InventorySystem {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DynamicInventoryApplication.class, args);
+		SpringApplication.run(InventorySystem.class, args);
 	}
 
 }
