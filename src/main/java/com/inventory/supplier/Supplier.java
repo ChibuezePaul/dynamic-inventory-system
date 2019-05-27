@@ -1,6 +1,6 @@
 package com.inventory.supplier;
 
-import com.inventory.commonFields.CommonFields;
+import com.inventory.CommonFields;
 
 import javax.persistence.Entity;
 
@@ -9,10 +9,12 @@ public class Supplier extends CommonFields {
 
 	private static final long serialVersionUID = 1L;
 	
+	private Integer active = 1;
 	private String supplierWebsite;
     private String supplierCode = "SUP"+System.currentTimeMillis();
 
-    public Supplier(String supplierWebsite, String supplierCode) {
+    public Supplier(Integer active, String supplierWebsite, String supplierCode) {
+        this.active = active;
         this.supplierWebsite = supplierWebsite;
         this.supplierCode = supplierCode;
     }

@@ -1,9 +1,8 @@
 package com.inventory.company;
 
-import com.inventory.commonFields.CommonFields;
+import com.inventory.CommonFields;
 
 import javax.persistence.Entity;
-import java.sql.Timestamp;
 
 @Entity
 public class Company extends CommonFields {
@@ -11,19 +10,29 @@ public class Company extends CommonFields {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private Integer active = 1;
 	private String coyLogo;
     private String footerText;
-    private String coyDecsription;
-    private Timestamp coyCode;
+    private String coyDescription;
+    private String coyCode = "COY"+System.currentTimeMillis();
 
-    public Company(String coyLogo, String footerText, String coyDecsription, Timestamp coyCode) {
+    public Company(Integer active, String coyLogo, String footerText, String coyDescription, String coyCode) {
+        this.active = active;
         this.coyLogo = coyLogo;
         this.footerText = footerText;
-        this.coyDecsription = coyDecsription;
+        this.coyDescription = coyDescription;
         this.coyCode = coyCode;
     }
 
     public Company() {
+    }
+
+    public Integer getActive() {
+        return active;
+    }
+
+    public void setActive(Integer active) {
+        this.active = active;
     }
 
     public String getCoyLogo() {
@@ -42,29 +51,34 @@ public class Company extends CommonFields {
         this.footerText = footerText;
     }
 
-    public String getCoyDecsription() {
-        return coyDecsription;
+    public String getCoyDescription() {
+        return coyDescription;
     }
 
-    public void setCoyDecsription(String coyDecsription) {
-        this.coyDecsription = coyDecsription;
+    public void setCoyDescription(String coyDescription) {
+        this.coyDescription = coyDescription;
     }
 
-    public Timestamp getCoyCode() {
+    public String getCoyCode() {
         return coyCode;
     }
 
-    public void setCoyCode(Timestamp coyCode) {
+    public void setCoyCode(String coyCode) {
         this.coyCode = coyCode;
     }
 
     @Override
     public String toString() {
         return "Company{" +
-                "coyLogo='" + coyLogo + '\'' +
+                "active=" + active +
+                ", coyLogo='" + coyLogo + '\'' +
                 ", footerText='" + footerText + '\'' +
-                ", coyDecsription='" + coyDecsription + '\'' +
-                ", coyCode=" + coyCode +
+                ", coyDescription='" + coyDescription + '\'' +
+                ", coyCode='" + coyCode + '\'' +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", dateCreated=" + dateCreated +
+                ", dateModified=" + dateModified +
                 '}';
     }
 }

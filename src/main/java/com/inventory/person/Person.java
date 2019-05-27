@@ -1,8 +1,8 @@
 package com.inventory.person;
 
-import javax.persistence.Entity;
+import com.inventory.CommonFields;
 
-import com.inventory.commonFields.CommonFields;
+import javax.persistence.Entity;
 
 @Entity
 public class Person extends CommonFields{
@@ -14,14 +14,14 @@ public class Person extends CommonFields{
 
 	private String email;
 	private String phone;
-	private String active;	
+	private Integer active = 1;
 	private String address;
 	
 	protected Person() {
 	
 	}
 	
-	public Person(String email, String phone, String active, String address) {
+	public Person(String email, String phone, Integer active, String address) {
 		super();
 		this.email = email;
 		this.phone = phone;
@@ -41,10 +41,10 @@ public class Person extends CommonFields{
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getActive() {
+	public Integer getActive() {
 		return active;
 	}
-	public void setActive(String active) {
+	public void setActive(Integer active) {
 		this.active = active;
 	}
 	public String getAddress() {

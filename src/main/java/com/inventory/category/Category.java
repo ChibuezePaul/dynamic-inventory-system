@@ -1,8 +1,8 @@
 package com.inventory.category;
 
-import javax.persistence.Entity;
+import com.inventory.CommonFields;
 
-import com.inventory.commonFields.CommonFields;
+import javax.persistence.Entity;
 
 @Entity(name="category")
 public class Category extends CommonFields{

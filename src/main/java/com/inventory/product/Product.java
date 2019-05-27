@@ -1,13 +1,13 @@
 package com.inventory.product;
 
 
+import com.inventory.CommonFields;
+import com.inventory.category.Category;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-
-import com.inventory.category.Category;
-import com.inventory.commonFields.CommonFields;
 
 @Entity
 public class Product extends CommonFields{
