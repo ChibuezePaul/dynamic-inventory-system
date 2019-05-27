@@ -7,7 +7,11 @@ import java.sql.Timestamp;
 
 @Entity
 public class Company extends CommonFields {
-    private String coyLogo;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String coyLogo;
     private String footerText;
     private String coyDecsription;
     private Timestamp coyCode;

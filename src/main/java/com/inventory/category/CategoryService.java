@@ -1,8 +1,17 @@
 package com.inventory.category;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
 public interface CategoryService {
+	
+	public String addCategory(Category category);
+	
+	public Category editCategory(Long id, Category category);
+
+	public String deleteCategory(Long id);
+
+	public List <Category> getAllCategory();
+
+	public Category getCategory(Long id);
 
 }

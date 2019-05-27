@@ -1,8 +1,15 @@
 package com.inventory.product;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
 public interface ProductService {
+	public String addProduct(Product product);
+	
+	public Product editProduct(Long id, Product product);
 
+	public String deleteProduct(Long id);
+
+	public List <Product> getAllProduct();
+	
+	public Product getProduct(Long id);
 }
