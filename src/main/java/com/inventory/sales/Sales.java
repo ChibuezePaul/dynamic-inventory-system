@@ -1,6 +1,6 @@
 package com.inventory.sales;
 
-import com.inventory.commonFields.CommonFields;
+import com.inventory.CommonFields;
 
 import javax.persistence.Entity;
 

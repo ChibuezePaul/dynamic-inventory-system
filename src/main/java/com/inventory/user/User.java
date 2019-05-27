@@ -1,8 +1,8 @@
 package com.inventory.user;
 
-import javax.persistence.Entity;
+import com.inventory.CommonFields;
 
-import com.inventory.commonFields.CommonFields;
+import javax.persistence.Entity;
 
 @Entity
 public class User extends CommonFields {
@@ -12,15 +12,17 @@ public class User extends CommonFields {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	private Integer active = 1;
 	private String username;
 	private String password;
 	private String userType;
 	
-	protected User() {
+	public User() {
 		
 	}
 	
-	public User(String username, String password, String userType) {
+	public User(Integer active, String username, String password, String userType) {
+		this.active = active;
 		this.username = username;
 		this.password = password;
 		this.userType = userType;
@@ -29,25 +31,37 @@ public class User extends CommonFields {
 	public String getUsername() {
 		return username;
 	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	public String getUserType() {
 		return userType;
 	}
+
 	public void setUserType(String userType) {
 		this.userType = userType;
 	}
+
+	public Integer getActive() {
+		return active;
+	}
+
+	public void setActive(Integer active) {
+		this.active = active;
+	}
+
 	@Override
 	public String toString() {
 		return "User [username=" + username + ", password=" + password + ", userType=" + userType + "]";
 	}
-
-	
 }
